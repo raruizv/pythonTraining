@@ -655,23 +655,23 @@ else:
 Ejercicio 48
     Escribir un programa que determine si un numero es primo o no. Un numero es
     primo si solo es divisible por si mismo y por la unidad
-
-cont = 0
-esPrimo = bool(True)
+'''
+cont = 2
+esPrimo = 1
 
 print("Evaluar si 'es' numero primo o 'no'. Favor aguarde...")
 valorUsr = int(input("Ingrese valor numerico\n"))
 
-for cont in range(2, (cont < valorUsr) and esPrimo):
+while (cont*cont <= valorUsr and esPrimo):
     if valorUsr % cont == 0:
-        esPrimo = False
-if esPrimo:
+        esPrimo = 0
+    cont += 1
+
+if bool(esPrimo) is True:
     print("{} es numero primo\n".format(valorUsr))
 else:
     print("{} no es numero primo\n".format(valorUsr))
 
-# Salida inconsistente, ver solucion en java
-'''
 '''
 Ejercicio 49
     Escribir un programa que escriba los numeros comprendidos entre 1 y 1000.
